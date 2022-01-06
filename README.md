@@ -1,5 +1,7 @@
 # Covid-Assignement
 
+git commit test
+
 Fonte delle risorse su GitHub data dal professore:
 - https://github.com/CSSEGISandData/COVID-19.git
 
@@ -22,4 +24,12 @@ the real world (either practical, political or physical) affect the vaccination;
 them together, which action should be taken to make them compatible and
 comparable;
 - Which kind of statistical analysis to perform and which kind of visualization to adopt
+to explain the data.
+
+
+d6100e47fd504e81970180779f076780
+
+https://towardsdatascience.com/the-corona-times-b4ed731e0b71
+
+IDV94SVcUJi9AiV1Gbp5bUsmcZhwAq3O
 to explain the data.
