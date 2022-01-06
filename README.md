@@ -1,6 +1,7 @@
 # EFR-Covid-Assignement
 
 <<<<<<< Updated upstream
+git commit test
 =======
 Fonte delle risorse su GitHub data dal professore:
 - https://github.com/CSSEGISandData/COVID-19.git
