@@ -1,8 +1,7 @@
-# EFR-Covid-Assignement
+# Covid-Assignement
 
-<<<<<<< Updated upstream
 git commit test
-=======
+
 Fonte delle risorse su GitHub data dal professore:
 - https://github.com/CSSEGISandData/COVID-19.git
 
@@ -33,4 +32,4 @@ d6100e47fd504e81970180779f076780
 https://towardsdatascience.com/the-corona-times-b4ed731e0b71
 
 IDV94SVcUJi9AiV1Gbp5bUsmcZhwAq3O
->>>>>>> Stashed changes
+to explain the data.
