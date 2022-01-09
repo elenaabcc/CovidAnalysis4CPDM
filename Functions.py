@@ -1,3 +1,0 @@
- zdsfghjmngbf
-
-print('hello world')
