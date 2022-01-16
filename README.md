@@ -39,7 +39,7 @@ Convert mandatory notebook jupyter files in python script
 make convert
 ```
 
-Run the dashboard and open the browser to [localhost:8085](localhost:8050)
+Run the dashboard and open the browser to [localhost:8050](localhost:8050)
 ```
 make run
 ```
