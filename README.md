@@ -1,7 +1,5 @@
 # Covid-Assignement
 
-git commit test
-
 Fonte delle risorse su GitHub data dal professore:
 - https://github.com/CSSEGISandData/COVID-19.git
 
@@ -33,3 +31,18 @@ https://towardsdatascience.com/the-corona-times-b4ed731e0b71
 
 IDV94SVcUJi9AiV1Gbp5bUsmcZhwAq3O
 to explain the data.
+
+## Setup
+
+Convert mandatory notebook jupyter files in python script
+```
+make convert
+```
+
+Run the dashboard and open the browser to [localhost:8085](localhost:8050)
+```
+make run
+```
+
+
+

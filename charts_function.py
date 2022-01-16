@@ -23,21 +23,6 @@ Limits to be consider:
 
 - Daily Limit 	50 µg/m³ (not to be exceeded for more than 35 days per year)
 - Annual Limit	40 µg/m³ (annual average)
-
-table = go.Figure(data=[go.Table(header=dict(values=['','Day count where Pm10>50µg/m³', 'rate of exceeding legal limits', 'Pm10 Annual Average','Variance of Pm10']
-                                            ),
-                                cells=dict(values=[ 
-                                    ['Bucharest (RO) 2019', 'Bucharest (RO) 2020', 'Bucharest (RO) 2021'], 
-                                    [(len(all19_RO_Bucharest[all19_RO_Bucharest['max']>50])), (len(all20_RO_Bucharest[all20_RO_Bucharest['max']>50])), (len(all20_RO_Bucharest[all20_RO_Bucharest['max']>50]))],
-                                    [str(round(len(all19_RO_Bucharest[all19_RO_Bucharest['max']>50])/len(all19_RO_Bucharest['max'])*100,2))+' %', str(round(len(all20_RO_Bucharest[all20_RO_Bucharest['max']>50])/len(all20_RO_Bucharest['max'])*100,2))+' %', str(round(len(all21_RO_Bucharest[all21_RO_Bucharest['max']>50])/len(all21_RO_Bucharest['max'])*100,2))+' %'],
-                                    [round(all19_RO_Bucharest['max'].mean(),2), round(all20_RO_Bucharest['max'].mean(),2),round(all21_RO_Bucharest['max'].mean(),2)],
-                                    [round(all19_RO_Bucharest.var()['max'],2), round(all20_RO_Bucharest.var()['max'],2), round(all21_RO_Bucharest.var()['max'],2)]
-                                ]
-                                            )
-                                )
-                        ]
-                )
-table
 '''
 
 '''
