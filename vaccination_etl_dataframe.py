@@ -16,4 +16,4 @@ data_covid19_owid = data_covid19_owid[['iso_code','date', 'location', 'continent
 
 # https://www.ecdc.europa.eu/en/publications-data/data-covid-19-vaccination-eu-eea
 data_covid19_ecdc= pd.read_csv("./covid19_dataframes/data_covid19_vaccination.csv")
-data_covid19_ecdc.drop(['NumberDosesReceived','NumberDosesExported', 'FirstDoseRefused', 'Vaccine'], axis=1, inplace=True)
+data_covid19_ecdc.drop(['NumberDosesReceived','NumberDosesExported', 'FirstDoseRefused'], axis=1, inplace=True)
