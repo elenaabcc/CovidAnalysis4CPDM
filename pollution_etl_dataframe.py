@@ -4,6 +4,11 @@ import os
 import glob
 
 
+# Create a new dataset were there are all the data without duplicate
+allPollutionData = pd.concat(map(pd.read_csv, glob.glob('./PollutionData/*.csv')))
+allPollutionData.drop_duplicates(subset='Date', keep="last")
+
+
 # CSV Aggregation to better elaboration
 listNameCSV = [['pollution19Q1', 'pollution19Q2', 'pollution19Q3', 'pollution19Q4'],
                ['pollution20Q1', 'pollution20Q2', 'pollution20Q3', 'pollution20Q4'],
@@ -44,3 +49,4 @@ for city in cities:
         yearDict[year] = dfConcatList[i].query(
             "City == '"+city+"' and Specie =='"+specie+"'").sort_values(by='Date')
     cityData[city] = yearDict
+
