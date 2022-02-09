@@ -1,12 +1,19 @@
 import pandas as pd
 icu_data=pd.read_csv(r'C:\Users\strag\Documents\GitHub\CovidAnalysis4CPDM\PROGETTO\icu dataframe.csv')
 
+#After importing the dataset, i create a smaller dataset and i focused my analysis on Italy and on the daily ICU occpuncy and the daily hospital occupancy.
+#The i created 3 columns (Year, Month and Day) by splitting the column date.
 
 #MEAN NUMBER OF COVID PATIENTS IN HOSPITAL AND ICU OCCUPANCY FROM THE BEGINNING TO NOW
 icu_italy=icu_data[icu_data['country']=='Italy']
 my_cond=['Daily ICU occupancy', 'Daily hospital occupancy']
 icu_italy=icu_italy[icu_italy['indicator'].isin(my_cond)]
 icu_italy[['Year', 'Month', 'Day']]=icu_italy['date'].str.split('-', expand=True)
+
+#I created a pivot table with index Year and Month, calculated the mean month occupancy of ICU and hospital and converted it to a dataframe.
+#I round all the dataframe to two-digits number.
+#Then i renamed all the month from integer number to character name.
+#I also renamed the columns of the dataframe. 
 
 df_icu=icu_italy.pivot_table(index=['Year', 'Month'], columns='indicator', values='value', aggfunc='mean').reset_index()
 df_icu=df_icu.round(2)
