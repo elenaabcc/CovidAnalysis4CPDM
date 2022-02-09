@@ -8,6 +8,10 @@ deaths=pd.read_csv(r'C:\Users\strag\Documents\GitHub\CovidAnalysis4CPDM\PROGETTO
 deaths_ita=deaths[deaths.countriesAndTerritories=='Italy']
 deaths_ita_upd=deaths_ita[deaths_ita.year!=2022]
 
+#Below i created a pivot table to group the data for each year, each month and to sum the number of deaths and then i converted it into a dataframe.
+#I created a new row and i included it to the dataframe. 
+#I renamed all the month by changing from integer number to charachter name.
+
 df=deaths_ita_upd.pivot_table(index=['year', 'month'], values='deaths', aggfunc='sum').reset_index()
 top_row = pd.DataFrame({'year':[2020],'month':[1],'deaths':[0.0]})
 
@@ -25,10 +29,9 @@ df.replace(10, "Oct", inplace=True)
 df.replace(11, "Nov", inplace=True)
 df.replace(12, "Dec", inplace=True)
 
-#Below i created a pivot table to group the data for each year, each month and to sum the number of deaths and then i converted it into a dataframe.
+#Below i created a pivot table to group the data for each year, each month and to sum the number of cases and then i converted it into a dataframe.
 #I created a new row and i included it to the dataframe. 
 #I renamed all the month by changing from integer number to charachter name.
-
 
 df1=deaths_ita_upd.pivot_table(index=['year', 'month'], values='cases', aggfunc='sum').reset_index()
 top_row_1 = pd.DataFrame({'year':[2020],'month':[1],'cases':[0.0]})
@@ -47,4 +50,5 @@ df1.replace(10, "Oct", inplace=True)
 df1.replace(11, "Nov", inplace=True)
 df1.replace(12, "Dec", inplace=True)
 df1
-#As i can see in the last month of the year 2021 (most of the population have been vaccinated at this time) the nmber of death is really lower with respect to the previous year.
+
+#The number of positive cases is higher for almost all the year 2021. Only October and November 2020 are higher and this was an effect due to the spread ofthe virus after the summer (at that time vaccination campaign hadn't started yet). In December 2021 i can see an higher number of positive cases, this is due to the high number of test produced and to the high transmissibility of the variant Omicron.
