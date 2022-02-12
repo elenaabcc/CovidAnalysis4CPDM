@@ -102,8 +102,9 @@ if df_vaccine['YearWeekISO'][0][5]=='W':
 #split the column in two columns
     df_vaccine[['Year', 'Month']]=df_vaccine['YearWeekISO'].str.split('-', expand=True)
 
-#select only the value different from 2020
-df_vaccine_2021=df_vaccine[df_vaccine.Year!='2020']
+#select only the value different from 2020 and create a copy to avoid problem (SettingWithCopyWarning: A value is trying to be set on a copy of a slice from a DataFrame.)
+#If you modify values in df later you will find that the modifications do not propagate back to the original data, and that Pandas does warning
+df_vaccine_2021=df_vaccine[df_vaccine.Year!='2020'].copy()
 
 #rename the value for the Month column
 df_vaccine_2021.replace("01", "Jan", inplace=True)
