@@ -1,45 +1,30 @@
-# Covid-Assignement
+# How the project is structured
 
-Fonte delle risorse su GitHub data dal professore:
-- https://github.com/CSSEGISandData/COVID-19.git
+## Type of filesystem
+The files for the ETL process of the datasets are:
+1. *etl_ecdc.py* 
+2. *etl_death_analysis.py*
+3. *etl_icu_dataframe.py*
+4. *etl_vaccination_dataframe.py*
+5. *etl_pollution_dataframe.py*
 
-Altre fonti che abbiamo trovato:
+The files for the chart generation are:
+1. *ecdc_analysis_charts_generator.ipynb* 
+2. *deaths_analysis_charts_generator.ipynb*
+3. *etl_icu_dataframe.py*
+4. *vaccination_charts_generator.ipynb.py*
+5. *pollution_charts_generator.ipynb*
+
+
+The datasets use for this project are:
+- https://aqicn.org/data-platform/covid19/
 - ...
 - ...
 
-Each presentation will discuss:
-- The scope and goals of the study;
-- The results obtained and the observation made;
-- The final thesis substantiated by the data, together with some explanatory
-hypothesis.
+## How to run the Dashboard
 
-Each group should decide:
-- The phenomenon to study. There is no predefined choice, you can analyze anything
-you find interesting. The goal is to study the effect of the vaccination on the spread of
-the virus and other aspect of the real world or, vice-versa, if and how parameters of
-the real world (either practical, political or physical) affect the vaccination;
-- Which data sources, in addition to the data from ECDC, to use. How to integrate
-them together, which action should be taken to make them compatible and
-comparable;
-- Which kind of statistical analysis to perform and which kind of visualization to adopt
-to explain the data.
-
-
-d6100e47fd504e81970180779f076780
-
-https://towardsdatascience.com/the-corona-times-b4ed731e0b71
-
-IDV94SVcUJi9AiV1Gbp5bUsmcZhwAq3O
-to explain the data.
-
-## Setup
-
-Convert mandatory notebook jupyter files in python script
-```
-make convert
-```
-
-Run the dashboard and open the browser to [localhost:8050](localhost:8050)
+The dashboard will run only in localhost so, run it and open the browser to [localhost:8050](localhost:8050).
+Run the following command on you terminal
 ```
 make run
 ```
