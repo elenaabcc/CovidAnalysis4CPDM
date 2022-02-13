@@ -50,3 +50,26 @@ for city in cities:
             "City == '"+city+"' and Specie =='"+specie+"'").sort_values(by='Date')
     cityData[city] = yearDict
 
+#______________________________________________________________________________________________________________________________
+
+splitedDate = allPollutionData["Date"].str.split("-", n = 2, expand = True)
+allPollutionData['Year']= splitedDate[0]
+allPollutionData['Week']= splitedDate[1]
+allPollutionData['Day']= splitedDate[2]
+
+
+res = allPollutionData.groupby(['Country', 'Specie', 'Year'])['count'].mean().reset_index()
+
+# Fill the no present values. 
+'''s
+dic = {'group':['A','B','C','D','E'],
+       'class' : ['g1','g2','g3']}
+
+mux = pd.MultiIndex.from_product(dic.values(), names=dic)
+
+df = df.set_index(list(dic)).reindex(mux, fill_value=0).reset_index()
+print (df)
+'''
+tmpDict = {'Country':res.Country.unique(), 'Specie':res.Specie.unique(), 'Year': res.Year.unique()}
+mux = pd.MultiIndex.from_product(tmpDict.values(), names = tmpDict)
+res = res.set_index(list(tmpDict)).reindex(mux, fill_value=0).reset_index()
