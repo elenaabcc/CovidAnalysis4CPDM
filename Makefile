@@ -4,6 +4,6 @@ first:
 
 # Run the script and the dashboard
 run:
-	ipython vaccination_charts_generator.ipynb
-	ipython pollution_charts_generator.ipynb
-	ipython dashboard.ipynb
+	cd vaccination_ue_analysis && ipython vaccination_charts_generator.ipynb && cd -
+	cd pollution_analysis && ipython pollution_charts_generator.ipynb && cd -
+	cd dashboard && ipython dashboard.ipynb 
