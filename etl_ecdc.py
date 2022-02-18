@@ -86,7 +86,7 @@ df_vaccine
 
 from datetime import datetime
 from datetime import date
-#cretae a fucntion to convert the YearWeek format
+#create a function to convert the YearWeek format
 def convert_from_ISO_to_date(d):
     return datetime.strptime(d + '-1', "%Y-W%W-%w")
 
