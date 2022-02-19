@@ -3,3 +3,9 @@
 /__pycache__
 .DS_Store
 charts_generator.py
+/icu_analysis/__pycache__
+/death_analysis/__pycache__
+/covid19_test_analysis/__pycache__
+/pollution_analysis/__pycache__
+/vaccination_it_analysis.ipynb/__pycache__
+/vaccination_ue_analysis/__pycache__
