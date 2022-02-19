@@ -1,7 +1,7 @@
 import pandas as pd
 #load the file 
 testing=pd.read_csv(r'testing_data.csv')
-testing
+
 #create a datframe with data only for Italy
 test_ita=testing[testing['country']=='Italy'].reset_index()
 
@@ -15,7 +15,6 @@ def convert_from_ISO_to_date(d):
 if test_ita['year_week'][0][5]=='W':
     result=[]
     for i in test_ita['year_week']:
-        print(i)
         i=convert_from_ISO_to_date(i)
         string=str(i)[0:7]
         result.append(string)
