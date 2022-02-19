@@ -3,3 +3,4 @@
 /__pycache__
 .DS_Store
 charts_generator.py
+/icu_analysis/__pycache__/*
