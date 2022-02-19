@@ -50,7 +50,7 @@ for city in cities:
             "City == '"+city+"' and Specie =='"+specie+"'").sort_values(by='Date')
     cityData[city] = yearDict
 
-#______________________________________________________________________________________________________________________________
+#______________________________________________________________________________________________
 
 splitedDate = allPollutionData["Date"].str.split("-", n = 2, expand = True)
 allPollutionData['Year']= splitedDate[0]
