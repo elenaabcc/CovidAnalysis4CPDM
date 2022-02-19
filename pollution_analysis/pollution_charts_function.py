@@ -1,6 +1,7 @@
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
+# [[df1,df2, ... ], [dfa,dfb, ...]]
 def generateTimeSeriesChartOverYears(dataframesMatrix, xaxis, yaxis, palette):
     fig = make_subplots(rows=len(dataframesMatrix),
                         cols=1, vertical_spacing=0.1)
