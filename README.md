@@ -10,7 +10,7 @@ Every foldes was create to make an analysis of an argument. Each of them contain
 4. ***icu_analysis***: here we analyzed the effect of vaccination campaing to icu
 5. ***death_analysis***: here we analyzed the effect of vaccination campaing to death
 6. ***drug_company_analysis***: for each drug companies was made a stock analysis
-7. ***drug_company_analysis***: A stock market analysis was made for the main index
+7. ***index_company_analysis***: A stock market analysis was made for the main index
 8. ***pollution_analysis***: to give to the project an environment aspect we studies the main pollution index over 2019,2020 and 2021
 9. ***dashboard***: to raise the level we have implemented a dashboard. 
 
